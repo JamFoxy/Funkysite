@@ -1,0 +1,31 @@
+    <header class="header">
+        <div class="logo">
+          <a href="{{ url_for('main.home') }}" style="text-decoration: none;">
+          <img src="logo.png" alt="Logo">
+          </a>
+        </div>
+        <div class="menu">
+          <a href="/blueprints/shop/templates/shop.html" style="text-decoration: none;">
+            <button class="shop">SHOP</button>
+          </a>
+          <a href="{{ url_for('main.discover') }}" style="text-decoration: none;">
+            <button class="discover">DISCOVER</button>
+          </a>
+          <a href="{{ url_for('main.activities') }}" style="text-decoration: none;">
+            <button class="activities">NURSERY'S</button>
+          </a>
+          <a href="{{ url_for('main.bedtime') }}" style="text-decoration: none;">
+            <button class="bedtime">BEDTIME</button>
+          </a>
+        </div>
+      </header>
+      <header class="main-header">
+        <div class="container">
+          <div class="intro">
+            <h1>Hey, welcome to our site!</h1>
+            <p>Your magical journey starts here</p>
+            <a href="#more" class="btn">Let's go!</a>
+          </div>
+        </div>
+      </header>
+

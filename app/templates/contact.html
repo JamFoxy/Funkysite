@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Main Section -->
+      <header class="header">
+        <div class="logo">
+          <a href="{{ url_for('main.home') }}" style="text-decoration: none;">
+          <img src="{{ url_for('static', filename='/images/Logo.png') }}" alt="Logo">
+          </a>
+        </div>
+        <div class="menu">
+          <a href="{{ url_for('main.shop') }}" style="text-decoration: none;">
+            <button class="shop">SHOP</button>
+          </a>
+          <a href="{{ url_for('main.discover') }}" style="text-decoration: none;">
+            <button class="discover">DISCOVER</button>
+          </a>
+          <a href="{{ url_for('main.nursery') }}" style="text-decoration: none;">
+            <button class="activities">NURSERY'S</button>
+          </a>
+          <a href="{{ url_for('main.bedtime') }}" style="text-decoration: none;">
+            <button class="bedtime">BEDTIME</button>
+          </a>
+        </div>
+      </header>
+      <header class="main-header">
+        <div class="container">
+          <div class="intro">
+            <h1>Have a question?</h1>
+            <p>Feel free to ask down bellow!</p>
+          </div>
+        </div>
+      </header>
+
+<div class="form-container">
+  <form method="POST" action="/send-email">
+    <h2 class="form-header">Have a question?</h2>
+
+    <label for="name">Name *</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address *</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="subject">Subject</label>
+    <select id="subject" name="subject" required>
+      <option value="">Choose a subject</option>
+      <option value="general">General Inquiry</option>
+      <option value="feedback">Feedback</option>
+      <option value="support">Support</option>
+    </select>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" maxlength="180" required></textarea>
+    <div class="counter"></div>
+
+    <button type="submit" class="submit-btn">Send Message</button>
+  </form>
+</div>
+
+
+
+<!-- Footer -->
+  <footer class="footer">
+    <a href="/" class="contact-btn">Contact</a>
+    <div class="f-text">
+      <p>&copy; 2025 Funky Fruits. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

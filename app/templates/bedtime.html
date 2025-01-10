@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedtime</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+          <a href="{{ url_for('main.home') }}" style="text-decoration: none;">
+          <img src="{{ url_for('static', filename='/images/Logo.png') }}" alt="Logo">
+          </a>
+        </div>
+        <div class="menu">
+          <a href="{{ url_for('main.shop') }}" style="text-decoration: none;">
+            <button class="shop">SHOP</button>
+          </a>
+          <a href="{{ url_for('main.discover') }}" style="text-decoration: none;">
+            <button class="discover">DISCOVER</button>
+          </a>
+          <a href="{{ url_for('main.nursery') }}" style="text-decoration: none;">
+            <button class="activities">NURSERY'S</button>
+          </a>
+          <a href="{{ url_for('main.bedtime') }}" style="text-decoration: none;">
+            <button class="bedtime">BEDTIME</button>
+          </a>
+        </div>
+      </header>
+      <header class="main-header">
+        <div class="container">
+          <div class="intro">
+            <h1>Shhh, it's Bedtime!</h1>
+            <p>Scroll down to see our videos for sleep</p>
+          </div>
+        </div>
+      </header>
+
+    <main class="content-container">
+        <section class="feature-section">
+            <h1 style="background: -webkit-linear-gradient(#ff9cf7, #9584ff); -webkit-background-clip: text; color: transparent; font-size: xxx-large">
+                Enjoy
+            </h1>
+            <h1> A peaceful night's sleep with our soothing Bedtime videos!</h1>
+        </section>
+
+        <div class="back-images">
+            <img src="/static/images/clouds.png" alt="Bedtime Moon and Stars">
+        </div>
+
+        <section class="card-section">
+            <div class="card">
+                <div class="card-text">
+                    <h3>Explore our calming bedtime videos on YouTube for a peaceful night's sleep.</h3>
+                    <a href="https://www.youtube.com/watch?v=YzWQmIvigHk" target="_blank" class="btn">Watch Now</a>
+                </div>
+                <div class="card-image">
+                    <img src="/static/images/covers/sleep.jpg" alt="Cloud">
+                </div>
+            </div>
+
+            <div class="video-gallery">
+                <a href="https://www.youtube.com/watch?v=shh4PaLw5o0" target="_blank">
+                <img src="{{ url_for('static', filename='/images/covers/eggs3.jpg') }}" alt="Video Thumbnail"></a>
+                <a href="https://www.youtube.com/watch?v=FihdW26abVs" target="_blank">
+                <img src="{{ url_for('static', filename='/images/covers/water.jpg') }}" alt="Video Thumbnail"></a>
+                <a href="https://www.youtube.com/watch?v=_Y6JC7X83Pc" target="_blank">
+                <img src="{{ url_for('static', filename='/images/covers/planets.jpg') }}" alt="Video Thumbnail"></a>
+                <a href="https://www.youtube.com/watch?v=JhP-OA7JUiI" target="_blank">
+                <img src="{{ url_for('static', filename='/images/covers/third.jpg') }}" alt="Video Thumbnail"></a>
+                <a href="https://www.youtube.com/watch?v=bUr9bGYmwKk" target="_blank">
+                <img src="{{ url_for('static', filename='/images/covers/BaaBaa.jpg') }}" alt="Video Thumbnail"></a>
+                <a href="https://www.youtube.com/watch?v=sOKExbrVU1I" target="_blank">
+                <img src="{{ url_for('static', filename='/images/covers/second2.jpg') }}" alt="Video Thumbnail"></a>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+  <footer class="footer">
+    <a href="{{ url_for('main.contact_form') }}" class="contact-btn">Contact</a>
+    <div class="f-text">
+      <p>&copy; 2025 Funky Fruits. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

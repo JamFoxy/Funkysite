@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedtime</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+      <!-- Floating Wrapper -->
+  <div class="floating-wrapper">
+    <img src="/static/images/backs/nurs.png" alt="Rising Image" class="floating-image">
+  </div>
+
+    <header class="header">
+        <div class="logo">
+          <a href="{{ url_for('main.home') }}" style="text-decoration: none;">
+          <img src="{{ url_for('static', filename='/images/Logo.png') }}" alt="Logo">
+          </a>
+        </div>
+        <div class="menu">
+          <a href="{{ url_for('main.shop') }}" style="text-decoration: none;">
+            <button class="shop">SHOP</button>
+          </a>
+          <a href="{{ url_for('main.discover') }}" style="text-decoration: none;">
+            <button class="discover">DISCOVER</button>
+          </a>
+          <a href="{{ url_for('main.nursery') }}" style="text-decoration: none;">
+            <button class="activities">NURSERY'S</button>
+          </a>
+          <a href="{{ url_for('main.bedtime') }}" style="text-decoration: none;">
+            <button class="bedtime">BEDTIME</button>
+          </a>
+        </div>
+      </header>
+      <header class="main-header">
+        <div class="container">
+          <div class="intro">
+            <h1>Nursery Rhymes are already here!</h1>
+            <p>See our freshest and most interesting videos</p>
+          </div>
+        </div>
+      </header>
+
+    <main class="content-container">
+        <section class="feature-section">
+            <h1 style="background: -webkit-linear-gradient(#ff9cf7, #9584ff); -webkit-background-clip: text; color: transparent; font-size: xxx-large">
+                Enjoy
+            </h1>
+        </section>
+
+        <div class="information"><h1> From relaxing nighttime calm to bold and colorful visuals, these videos offer a sensory adventure that boosts your mood, eases stress, and sparks your creativity.
+        Take a moment to explore, experience, and connect with the lively world of Funky Fruits. Allow your senses to follow a playful path of discovery, rhythm, and tranquility through the charm of Funky Fruits.</h1>
+        </div>
+
+        <div class="back-images">
+            <img src="/static/images/covers/hickory.jpg" alt="Nursery">
+        </div>
+
+            <div class="video-gallery">
+                <a href="https://www.youtube.com/watch?v=KpJvuhB1f8M" target="_blank">
+                <img src="{{ url_for('static', filename='/images/covers/abc.jpg') }}" alt="Video Thumbnail"></a>
+                <a href="https://www.youtube.com/watch?v=WmPMkQQ9-TY" target="_blank">
+                <img src="{{ url_for('static', filename='/images/covers/finger.jpg') }}" alt="Video Thumbnail"></a>
+                <a href="https://www.youtube.com/watch?v=NJPTjgcDq6Y" target="_blank">
+                <img src="{{ url_for('static', filename='/images/covers/rain.png') }}" alt="Video Thumbnail"></a>
+                <a href="https://www.youtube.com/watch?v=PBr2-uDHEIU" target="_blank">
+                <img src="{{ url_for('static', filename='/images/covers/mc.jpg') }}" alt="Video Thumbnail"></a>
+                <a href="https://www.youtube.com/watch?v=shh4PaLw5o0" target="_blank">
+                <img src="{{ url_for('static', filename='/images/covers/BaaBaa.jpg') }}" alt="Video Thumbnail"></a>
+                <a href="https://www.youtube.com/watch?v=shh4PaLw5o0" target="_blank">
+                <img src="{{ url_for('static', filename='/images/covers/eggs3.jpg') }}" alt="Video Thumbnail"></a>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+  <footer class="footer">
+    <a href="{{ url_for('main.contact_form') }}" class="contact-btn">Contact</a>
+    <div class="f-text">
+      <p>&copy; 2025 Funky Fruits. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+      <!-- Floating Wrapper -->
+  <div class="floating-wrapper">
+    <img src="/static/images/backs/Discovery.png" alt="Rising Image" class="floating-image">
+  </div>
+
+    <header class="header">
+        <div class="logo">
+          <a href="{{ url_for('main.home') }}" style="text-decoration: none;">
+          <img src="{{ url_for('static', filename='/images/Logo.png') }}" alt="Logo">
+          </a>
+        </div>
+        <div class="menu">
+          <a href="{{ url_for('main.shop') }}" style="text-decoration: none;">
+            <button class="shop">SHOP</button>
+          </a>
+          <a href="{{ url_for('main.discover') }}" style="text-decoration: none;">
+            <button class="discover">DISCOVER</button>
+          </a>
+          <a href="{{ url_for('main.nursery') }}" style="text-decoration: none;">
+            <button class="activities">NURSERY'S</button>
+          </a>
+          <a href="{{ url_for('main.bedtime') }}" style="text-decoration: none;">
+            <button class="bedtime">BEDTIME</button>
+          </a>
+        </div>
+      </header>
+      <header class="main-header">
+        <div class="container">
+          <div class="intro">
+            <h1>Don't miss our new videos!</h1>
+            <p>Everything you are looking for is here</p>
+          </div>
+        </div>
+      </header>
+
+    <main class="content-container">
+        <section class="feature-section">
+            <h1 style="background: -webkit-linear-gradient(#ff9cf7, #9584ff); -webkit-background-clip: text; color: transparent; font-size: xxx-large">Discover</h1>
+            <h1>From relaxing nighttime calm to bold and colorful visuals, these videos offer a sensory adventure...</h1>
+            <img src="/static/images/covers/sport.jpg" alt="Funky Fruits" style="width: 70%;">
+        </section>
+
+        <section class="card-section">
+            <div class="card">
+                <div class="card-image">
+                    <img src="/static/images/covers/race.jpg" alt="New Video">
+                    <span class="badge">NEW VIDEO!</span>
+                </div>
+                <div class="card-text">
+                    <h3>New video on YouTube, don't miss it!</h3>
+                    <a href="https://www.youtube.com/@funkyfruits/videos" target="_blank" class="dis-btn">Watch Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="/static/images/covers/sleep.jpg" alt="Sleepy Stars">
+                </div>
+                <div class="card-text">
+                    <h3>Don't forget our calming sleep videos!</h3>
+                    <a href="https://www.youtube.com/@funkyfruits/videos" target="_blank" class="dis-btn">Watch Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="/static/images/covers/Num.jpg" alt="Fun">
+                </div>
+                <div class="card-text">
+                    <h3>Watch Funky Fruits on YouTube</h3>
+                    <a href="https://www.youtube.com/@funkyfruits/videos" target="_blank" class="shop-btn">Visit Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+  <footer class="footer">
+    <a href="{{ url_for('main.contact_form') }}" class="contact-btn">Contact</a>
+    <div class="f-text">
+      <p>&copy; 2025 Funky Fruits. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

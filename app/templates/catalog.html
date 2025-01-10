@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Catalog</h1>
+<div>
+    {% for video in videos %}
+        <div>
+            <img src="{{ url_for('static', filename='images/' ~ video.thumbnail) }}" alt="{{ video.title }}">
+            <h3>{{ video.title }}</h3>
+            <a href="{{ url_for('main.video', video_id=video.id) }}">Watch</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

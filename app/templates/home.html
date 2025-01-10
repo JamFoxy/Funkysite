@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+      <!-- Floating Wrapper -->
+  <div class="floating-wrapper">
+    <img src="/static/images/backs/base.png" alt="Rising Image" class="floating-image">
+  </div>
+  <!-- Main Section -->
+      <header class="header">
+        <div class="logo">
+          <a href="{{ url_for('main.home') }}" style="text-decoration: none;">
+          <img src="{{ url_for('static', filename='/images/Logo.png') }}" alt="Logo">
+          </a>
+        </div>
+        <div class="menu">
+          <a href="{{ url_for('main.shop') }}" style="text-decoration: none;">
+            <button class="shop">SHOP</button>
+          </a>
+          <a href="{{ url_for('main.discover') }}" style="text-decoration: none;">
+            <button class="discover">DISCOVER</button>
+          </a>
+          <a href="{{ url_for('main.nursery') }}" style="text-decoration: none;">
+            <button class="activities">NURSERY'S</button>
+          </a>
+          <a href="{{ url_for('main.bedtime') }}" style="text-decoration: none;">
+            <button class="bedtime">BEDTIME</button>
+          </a>
+        </div>
+      </header>
+      <header class="main-header">
+        <div class="container">
+          <div class="intro">
+            <h1>Hey, welcome to Funky Fruits!</h1>
+            <p>Your magical journey starts here</p>
+          </div>
+        </div>
+      </header>
+
+  <!-- Section with image and text -->
+  <div class="content-container">
+    <!-- Блок Funky Fruits Shop -->
+    <div class="card">
+      <div class="card-image">
+        <img src="/static/images/covers/shop.jpg" alt="Funky Fruits">
+        <span class="badge">NEW</span>
+      </div>
+      <div class="card-text">
+        <h3><span class="icon">🛒</span> Funky Fruits Shop</h3>
+        <p>Shop an adorable array of themed merchandise, and funky collections!</p>
+        <button class="shop-btn">SHOP NOW</button>
+      </div>
+    </div>
+
+    <!-- Блок Nursery Rhymes -->
+    <div class="card blue">
+      <div class="card-text">
+        <h3><span class="icon">🧸</span> Nursery Rhymes</h3>
+        <p>THERE'S ALWAYS FUN WITH OUR FUNKY FRUITS’ NURSERY RHYMES!</p>
+        <a href="https://www.youtube.com/@funkyfruits/videos" target="_blank" class="btn">Watch Now</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="more" class="features">
+    <div class="feature">
+      <img src="/static/images/covers/bingo.png" alt="Bingo">
+      <h2 style="background: -webkit-linear-gradient(#ff9cf7, #9584ff); -webkit-background-clip: text; color: transparent; font-size: xx-large">New Formats!</h2>
+      <h1>Discover our newest exciting format of videos, designed for your happiness and convenience.</h1>
+    </div>
+    <div class="feature">
+      <img src="/static/images/covers/mus.jpg" alt="Feature 2">
+      <h2 style="background: -webkit-linear-gradient(#ff9cf7, #9584ff); -webkit-background-clip: text; color: transparent; font-size: xx-large">Be Playful</h2>
+      <h1>Enjoy interactive fun with dynamic content and easy navigation.</h1>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="{{ url_for('main.contact_form') }}" class="contact-btn">Contact</a>
+    <div class="f-text">
+      <p>&copy; 2025 Funky Fruits. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
