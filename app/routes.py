@@ -2,9 +2,6 @@ from flask import render_template, Blueprint, request, redirect, url_for, flash
 from flask_mail import Message
 from app import app
 
-app
-
-
 @app.route('/')
 def home():
     return render_template('home.html')
